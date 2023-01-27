@@ -1,0 +1,10 @@
+{
+  "name": "practice-module-one",
+  "version": "1.0.0",
+  "description": "Practice problems for module one",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
