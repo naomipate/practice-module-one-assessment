@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "Practice problems for module one",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest --runInBand",
+    "watch": "jest --watchAll",
+    "test-1": "jest accumulator-pattern.test.js",
+    "test-1:watch": "jest --watch accumulator-pattern.test.js"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
 }
