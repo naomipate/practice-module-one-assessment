@@ -3,107 +3,85 @@ const sampleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sampleArray2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 /**
- * Returns the sum of all numbers in an array
- * @param {array} arr - The array to be processed
- * @returns {number} - The sum of all numbers in the array
+ * Calculates the sum of all numbers in an array
+ * @param {Array} arr - The array to be processed
+ * @returns {Number} - The sum of all numbers in the array
  */
 function sumArray(arr) {}
 
 /**
- * Returns the product of all numbers in an array
- * @param {array} arr - The array to be processed
- * @returns {number} - The product of all numbers in the array
+ * Finds the largest number in an array
+ * @param {Array} arr - The array to be processed
+ * @returns {Number} - The largest number in the array
  */
-function productArray(arr) {}
+function findLargest(arr) {}
 
 /**
- * Returns the concatenation of all strings in an array
- * @param {array} arr - The array to be processed
- * @returns {string} - The concatenation of all strings in the array
+ * Finds the average of all numbers in an array
+ * @param {Array} arr - The array to be processed
+ * @returns {Number} - The average of all numbers in the array
  */
-function concatenateArray(arr) {}
+function findAverage(arr) {}
 
 /**
- * Returns the number of elements in an array that are greater than a specified threshold
- * @param {array} arr - The array to be processed
- * @param {number} threshold - The threshold to compare against
- * @returns {number} - The number of elements in the array greater than the threshold
+ * Counts the number of occurrences of a specific value in an array
+ * @param {Array} arr - The array to be processed
+ * @param {any} value - The value to count
+ * @returns {Number} - The number of occurrences of the value in the array
  */
-function countGreaterThan(arr, threshold) {}
+function countValue(arr, value) {}
 
 /**
- * Returns the average of all numbers in an array
- * @param {array} arr - The array to be processed
- * @returns {number} - The average of all numbers in the array
+ * Concatenates all strings in an array into a single string
+ * @param {Array} arr - The array to be processed
+ * @returns {String} - The concatenated string
  */
-function averageArray(arr) {}
+function concatenateStrings(arr) {}
 
 /**
- * Finds the product of all elements in the given array
- * @param {array} arr - The array whose elements will be multiplied
- * @returns {number} - The product of all elements in the array
+ * Determines if all elements in an array are positive numbers
+ * @param {Array} arr - The array to be processed
+ * @returns {Boolean} - True if all elements are positive numbers, false otherwise
  */
-function findProduct(arr) {
-  let product = 1;
-  for (let i = 0; i < arr.length; i++) {
-    product *= arr[i];
-  }
-  return product;
-}
+function allPositive(arr) {}
 
 /**
- * Finds the sum of all elements in the given array
- * @param {array} arr - The array whose elements will be added
- * @returns {number} - The sum of all elements in the array
+ * Calculates the product of all numbers in an array
+ * @param {Array} arr - The array to be processed
+ * @returns {Number} - The product of all numbers in the array
  */
-function findSum(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
-}
+function multiplyArray(arr) {}
 
 /**
- * Finds the average of all elements in the given array
- * @param {array} arr - The array whose elements will be averaged
- * @returns {number} - The average of all elements in the array
+ * Counts the number of odd numbers in an array
+ * @param {Array} arr - The array to be processed
+ * @returns {Number} - The number of odd numbers in the array
  */
-function findAverage(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
-}
+function countOdd(arr) {}
 
 /**
- * Counts the number of elements in the given array that are greater than a specified value
- * @param {array} arr - The array to be searched
- * @param {number} value - The value to compare against
- * @returns {number} - The number of elements in the array greater than the specified value
+ * Reverses the order of elements in an array
+ * @param {Array} arr - The array to be processed
+ * @returns {Array} - The reversed array
  */
-function countGreaterThan(arr, value) {
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > value) {
-      count++;
-    }
-  }
-  return count;
-}
+function reverseArray(arr) {}
 
 /**
- * Finds the smallest element in the given array
- * @param {array} arr - The array to be searched
- * @returns {number} - The smallest element in the array
+ * Determines if a string is a palindrome (the same forwards and backwards)
+ * @param {String} str - The string to be processed
+ * @returns {Boolean} - True if the string is a palindrome, false otherwise
  */
-function findSmallest(arr) {
-  let smallest = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < smallest) {
-      smallest = arr[i];
-    }
-  }
-  return smallest;
-}
+function isPalindrome(str) {}
+
+module.exports = {
+  sumArray,
+  findLargest,
+  findAverage,
+  countValue,
+  concatenateStrings,
+  allPositive,
+  multiplyArray,
+  countOdd,
+  reverseArray,
+  isPalindrome,
+};
