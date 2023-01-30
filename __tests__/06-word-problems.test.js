@@ -1,3 +1,9 @@
+const {
+  calculateBulkPrice,
+  calculateDiscountedPrice,
+  categorizeAnimals,
+} = require("../src/word-problems");
+
 describe("calculateBulkPrice", () => {
   it("should return the original price if quantity is between 1 and 10", () => {
     const price = 10;

@@ -29,3 +29,9 @@ function calculateDiscountedPrice() {}
  * This function categorizes an array of animal objects based on the type and habitat of each animal and adds a category key to each object, then returns the modified array.
  */
 function categorizeAnimals(animals) {}
+
+module.exports = {
+  calculateBulkPrice,
+  calculateDiscountedPrice,
+  categorizeAnimals,
+};
