@@ -18,3 +18,14 @@ function calculateBulkPrice() {}
  * This function takes in the quantity of items a user is purchasing, the coupon code a user is using (if any) and the loyalty discount a user has (if any) and returns the final price of the items after all discounts have been applied.
  */
 function calculateDiscountedPrice() {}
+
+/**
+ * @function categorizeAnimals
+ * @param {Object[]} animals - An array of animal objects.
+ * @param {string} animals[].type - The type of animal. Could be "MAMMAL", "REPTILE", "BIRD", or another value.
+ * @param {string} animals[].habitat - The habitat of the animal. Could be "LAND", "WATER", or another value.
+ * @returns {Object[]} The original array of animal objects, with a new key of `category` added to each object.
+ *
+ * This function categorizes an array of animal objects based on the type and habitat of each animal and adds a category key to each object, then returns the modified array.
+ */
+function categorizeAnimals(animals) {}

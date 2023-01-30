@@ -116,3 +116,53 @@ Write a JavaScript function that takes in the following parameters:
 - The _loyalty discount_ a user has (if any)
 
 Return the final price of the items after all discounts have been applied.
+
+## Categorizing Animals
+
+```js
+categorizeAnimals();
+```
+
+A zoo is trying to keep track of all the different species of animals they have on display. To help with this task, they want to categorize each animal based on its `type`.
+
+Write an algorithm that adds a key of `category` to each object in an array of objects. Each object represents a single animal.
+
+- If the animal has a `type` of `"MAMMAL"`, set the `category` value to `"LAND"` if the `habitat` is equal to `"LAND"`. If the habitat is equal to `"WATER"`, set the `category` to `"WATER"`.
+- If the animal has a `type` of `"REPTILE"`, set the `category` value to `"SCALY"`.
+- If the animal has a `type` of `"BIRD"`, set the `category` value to `"FLIGHT"`.
+- If the animal has any other `type` than the above, set the `category` value to `"OTHER"`.
+
+Then, return the overall array with all modified animals.
+
+```js
+// EXAMPLE:
+const animals = [
+  { type: "MAMMAL", habitat: "LAND" },
+  { type: "REPTILE", habitat: "LAND" },
+  { type: "BIRD", habitat: "FLIGHT" },
+  { type: "FISH", habitat: "WATER" },
+];
+categorizeAnimals(animals);
+//> [
+//>   {
+//>     type: "MAMMAL",
+//>     habitat: "LAND",
+//>     category: "LAND",
+//>   },
+//>   {
+//>     type: "REPTILE",
+//>     habitat: "LAND",
+//>     category: "SCALY",
+//>   },
+//>   {
+//>     type: "BIRD",
+//>     habitat: "FLIGHT",
+//>     category: "FLIGHT",
+//>   },
+//>   {
+//>     type: "FISH",
+//>     habitat: "WATER",
+//>     category: "OTHER",
+//>   },
+//> ];
+```
