@@ -1,3 +1,75 @@
+# Array Manipulation
+
+## createArray(number)
+
+Creates an array of the specified size.
+
+- Input: `5`
+- Output: `[null, null, null, null, null]`
+
+## addElement(array, element)
+
+Adds an element to the end of the given array.
+
+- Input: `[1, 2, 3], 4`
+- Output: `4`
+
+## removeElement(array, index)
+
+Removes an element from the given array at the specified index.
+
+- Input: `[1, 2, 3], 1`
+- Output: `true`
+
+## getElement(array, index)
+
+Returns the element at the specified index in the given array.
+
+- Input: `[1, 2, 3], 1`
+- Output: `2`
+
+## getArrayLength(array)
+
+Returns the number of elements in the given array.
+
+- Input: `[1, 2, 3]`
+- Output: `3`
+
+## findElement(array, element)
+
+Finds the index of the first occurrence of a specified element in the given array.
+
+- Input: `[1, 2, 3], 2`
+- Output: `1`
+
+## reverseArray(array)
+
+Reverses the order of the elements in the given array.
+
+- Input: `[1, 2, 3]`
+- Output: `[3, 2, 1]`
+
+## sortArray(array)
+
+Sorts the elements in the given array in ascending order.
+
+- Input: `[3, 2, 1]`
+- Output: `[1, 2, 3]`
+
+## removeDuplicates(array)
+
+Removes duplicate elements from the given array.
+
+- Input: `[1, 2, 2, 3]`
+- Output: `[1, 2, 3]`
+
+## selectElements(array, n)
+
+Returns a new array that contains a specified number of elements from the given array.
+
+- Input: `[1, 2, 3, 4, 5], 3`
+- Output: `[1, 2, 3]`
+
 # Accumulator Pattern
 
 Get hands-on with the accumulator pattern by solving a series of challenges with some sample data (sampleArray, sampleArray2) that you can use to test the functions.

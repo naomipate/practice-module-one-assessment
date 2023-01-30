@@ -96,3 +96,16 @@ function removeDuplicates(arr) {
 function selectElements(arr, n) {
   // code to select elements
 }
+
+module.exports = {
+  createArray,
+  addElement,
+  removeElement,
+  getElement,
+  getArrayLength,
+  findElement,
+  reverseArray,
+  sortArray,
+  removeDuplicates,
+  selectElements,
+};
