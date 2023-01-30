@@ -6,8 +6,12 @@
   "scripts": {
     "test": "jest --runInBand",
     "watch": "jest --watchAll",
-    "test-1": "jest accumulator-pattern.test.js",
-    "test-1:watch": "jest --watch accumulator-pattern.test.js"
+    "test-1": "jest --watch 01-arrays.test.js",
+    "test-2": "jest --watch 02-objects.test.js",
+    "test-3": "jest --watch 03-simple-functions.test.js",
+    "test-4": "jest --watch 04-accumulator-pattern.test.js",
+    "test-5": "jest --watch 05-complex-functions.test.js",
+    "test-6": "jest --watch 06-word-problems.test.js"
   },
   "author": "",
   "license": "ISC",
