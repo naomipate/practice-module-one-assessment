@@ -433,15 +433,15 @@ categorizeAnimals(animals);
 
 ---
 
-## Reading Test
+## Bonus Test
 
 Congrats! You've made it to the end. Here's a secret bonus for you... create a new file called `07-secret.js` in the `src` folder.
 
 Add the following function to this file:
 
 ```js
-function iCanRead() {
-  return "I'm about to earn some bonus points with my reading skills! 💪";
+function giveMeThosePoints() {
+  return "Give me those bonus points! 💪";
 }
 ```
 
@@ -449,4 +449,6 @@ function iCanRead() {
 2. Commit the changes
 3. Open a pull request
 
-Your pull request should only include this change, if it does, you will earn a bonus point added to your lowest score. If it does not, sorry, but you won't earn anything 😭
+Your pull request should only include this change, if it does, you will earn a bonus point added to your lowest score.
+
+If it does not, sorry, but you won't earn anything 😭
