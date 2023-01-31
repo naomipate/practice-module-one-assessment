@@ -4,9 +4,8 @@ const {
   updateProperty,
   removeProperty,
   getProperty,
-  getObjectType,
+  getKeyValueType,
   getObjectName,
-  getObjectProperties,
   compareObjects,
   cloneObject,
 } = require("../src/02-objects");
@@ -137,35 +136,23 @@ describe("getProperty", () => {
   });
 });
 
-describe("getObjectType", () => {
-  test("returns the type of an object", () => {
-    const obj = { name: "John Doe", age: 30 };
-    const result = getObjectType(obj);
-    expect(result).toBe("object");
-  });
-
+describe("getKeyValueType", () => {
   test("returns the type of a string", () => {
-    const obj = "hello";
-    const result = getObjectType(obj);
+    const obj = { name: "John Doe", age: 30 };
+    const result = getKeyValueType(obj, "name");
     expect(result).toBe("string");
   });
 
   test("returns the type of a number", () => {
-    const obj = 42;
-    const result = getObjectType(obj);
+    const obj = { name: "John Doe", age: 30 };
+    const result = getKeyValueType(obj, "age");
     expect(result).toBe("number");
   });
 
   test("returns the type of a boolean", () => {
-    const obj = true;
-    const result = getObjectType(obj);
+    const obj = { name: "John Doe", age: 30, employed: true };
+    const result = getKeyValueType(obj, "employed");
     expect(result).toBe("boolean");
-  });
-
-  test("returns the type of a function", () => {
-    const obj = function () {};
-    const result = getObjectType(obj);
-    expect(result).toBe("function");
   });
 });
 

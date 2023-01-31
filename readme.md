@@ -159,12 +159,12 @@ Returns the value of a property on the given object
 - Input: `{ name: "John Doe" }, "name"`
 - Output: `"John Doe"`
 
-### getObjectType(obj)
+### getKeyValueType(obj, key)
 
-Returns the type of the given object
+Returns the type of the given key's value
 
-- Input: `{ name: "John Doe" }`
-- Output: `"object"`
+- Input: `{ name: "John Doe" }, "name"`
+- Output: `"string"`
 
 ### getObjectName(obj)
 

@@ -62,12 +62,13 @@ function getProperty(obj, propertyName) {
 }
 
 /**
- * Returns the type of the given object
- * @param {object} obj - The object whose type will be returned
- * @returns {string} - The type of the object
+ * Returns the type of the given key's value
+ * @param {object} obj - The object to search for the key
+ * @param {*} key - The key to search for in the object
+ * @returns {string} - The type of the value of the key
  */
-function getObjectType(obj) {
-  // code to return object type
+function getKeyValueType(obj, key) {
+  // code to return key value type
 }
 
 /**
@@ -104,9 +105,8 @@ module.exports = {
   updateProperty,
   removeProperty,
   getProperty,
-  getObjectType,
+  getKeyValueType,
   getObjectName,
-  getObjectProperties,
   compareObjects,
   cloneObject,
 };
