@@ -50,3 +50,12 @@ function countSharedHobbies(data) {}
 // A Lion is a Mammal that lives in the Savannah. It is a Carnivore that eats gazelles, zebras, buffaloes. It has a Golden color, is 4 ft tall, and weighs 400 lbs. It has a mane, tail, and large paws. It lives in Pride and hunts in stalking, chasing way. It migrates to Africa, Middle East
 
 function getAnimalDescription(animalName, animalData) {}
+
+module.exports = {
+  printPersonData,
+  updateAddress,
+  addNewPerson,
+  averageAge,
+  countSharedHobbies,
+  getAnimalDescription,
+};
