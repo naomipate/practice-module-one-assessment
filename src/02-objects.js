@@ -106,3 +106,16 @@ function compareObjects(obj1, obj2) {
 function cloneObject(obj) {
   // code to clone object
 }
+
+module.exports = {
+  createObject,
+  addProperty,
+  updateProperty,
+  removeProperty,
+  getProperty,
+  getObjectType,
+  getObjectName,
+  getObjectProperties,
+  compareObjects,
+  cloneObject,
+};
