@@ -37,7 +37,7 @@ The following commands will watch for changes in the noted file and run tests ea
 - `npm run test-5` &nbsp;&nbsp; 05-complex-functions.js
 - `npm run test-6` &nbsp;&nbsp; 06-word-problems.js
 
-Lastly, on the testing front, these commands will run each file without watching for changes. They're good for those of you who like to solve the problem first, then test it.
+These commands will run each file without watching for changes. They're good for those of you who like to solve the problem first, then test it.
 
 - `npm test arrays`
 - `npm test objects`
