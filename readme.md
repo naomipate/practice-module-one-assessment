@@ -6,7 +6,7 @@ In this set of exercises, you will put your Javascript skills to the test. To he
 
 Additionally, we encourage you to add your own data to the examples provided. This will give you a chance to see how your solutions work with different inputs, and it will help you solidify your understanding of the material.
 
-> Adding your own data may break some of the tests. That's ok! See if you can adjust the test to account for the new data; maybe even write your own if you're feeling up to the challenge.
+> Adding your own data may break some of the tests. That's ok! See if you can adjust the test to account for the new data; maybe even write your own if you're feeling up to the challenge. Alternatively, you can use `console.log` to verify that your functions are returning the correct data based on the changes you made.
 
 Finally, we encourage you to stretch your knowledge and use materials that you may not be fully comfortable with. This is a great opportunity to explore new areas and see how far you can push your skills. So get ready to dive in and have fun!
 
