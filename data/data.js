@@ -3,7 +3,7 @@ let people = [
   {
     name: "John",
     age: 25,
-    hobbies: ["reading", "running"],
+    hobbies: ["reading", "hiking", "traveling"],
     address: {
       street: "123 Main St",
       city: "Anytown",
@@ -25,7 +25,7 @@ let people = [
   {
     name: "Bob",
     age: 18,
-    hobbies: ["gaming", "hiking"],
+    hobbies: ["gaming", "hiking", "traveling"],
     address: {
       street: "789 Oak St",
       city: "Bigcity",
@@ -52,8 +52,10 @@ const animals = [
     },
     behavior: {
       social: "Pride",
-      hunting: {
-        tactics: ["Coordination", "Stealth"],
+      habitat: {
+        migration: {
+          locations: ["Africa", "Middle East"],
+        },
       },
     },
   },
@@ -96,7 +98,7 @@ const animals = [
       social: "Colony",
       habitat: {
         migration: {
-          locations: ["Antarctic"],
+          locations: ["Antarctica"],
         },
       },
     },
