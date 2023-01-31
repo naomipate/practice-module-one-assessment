@@ -338,6 +338,13 @@ Format:
 A Lion is a Mammal that lives in the Savannah. It is a Carnivore that eats gazelles, zebras, buffaloes. It has a Golden color, is 4 ft tall, and weighs 400 lbs. It has a mane, tail, and large paws. It lives in Pride and hunts in stalking, chasing way. It migrates to Africa, Middle East
 ```
 
+### getAllBookAuthors(books)
+
+Returns all of the authors from an array of books. If the inputted books array is empty, return [].
+
+- `@param {Object[]} books` - An array of books.
+- `@returns {string[]}` An array of strings, which are book authors.
+
 ---
 
 ## Word Problems

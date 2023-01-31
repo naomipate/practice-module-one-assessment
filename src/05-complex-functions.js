@@ -1,5 +1,6 @@
 const examplePersonData = require("../data/people.js");
 const exampleAnimalData = require("../data/animals.js");
+const exampleBookData = require("../data/books.js");
 
 /**
  * Prints out the name, age, hobbies and address of each person in the data array
@@ -51,6 +52,29 @@ function countSharedHobbies(data) {}
 
 function getAnimalDescription(animalName, animalData) {}
 
+/**
+*
+* getAllBookAuthors()
+* Returns all of the authors from an array of books. If the inputted books array is empty, return [].
+* @param {Object[]} books - An array of books.
+* @returns {string[]} An array of strings, which are book authors.
+* EXAMPLE:
+* getAllBookAuthors(books);
+* //> [
+    "J.K. Rowling",
+    "Stephen King",
+    "Jane Austen",
+    "Mark Twain",
+    "Leo Tolstoy",
+    "Margaret Atwood",
+    "George Orwell",
+    "Harper Lee",
+    "F. Scott Fitzgerald",
+    "Ernest Hemingway",
+  ];
+*/
+function getAllBookAuthors(books) {}
+
 module.exports = {
   printPersonData,
   updateAddress,
@@ -58,4 +82,5 @@ module.exports = {
   averageAge,
   countSharedHobbies,
   getAnimalDescription,
+  getAllBookAuthors,
 };

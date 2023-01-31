@@ -7,7 +7,9 @@ const {
   getAnimalDescription,
 } = require("../src/05-complex-functions");
 
-const { people, animals } = require("../data/data");
+const { people } = require("../data/people");
+const { animals } = require("../data/animals");
+const { books } = require("../data/books");
 
 describe("printPersonData", () => {
   test("returns 'No data provided' when data is not an array", () => {
@@ -163,5 +165,28 @@ describe("getAnimalDescription()", () => {
   test("returns 'Animal not found' for unknown animal", () => {
     const result = getAnimalDescription("giraffe", animals);
     expect(result).toEqual("Animal not found");
+  });
+});
+
+describe("getAllBookAuthors", () => {
+  test("should return an array of book authors", () => {
+    const result = getAllBookAuthors(books);
+    expect(result).toEqual([
+      "J.K. Rowling",
+      "Stephen King",
+      "Jane Austen",
+      "Mark Twain",
+      "Leo Tolstoy",
+      "Margaret Atwood",
+      "George Orwell",
+      "Harper Lee",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway",
+    ]);
+  });
+
+  test("should return an empty array if the input array is empty", () => {
+    const result = getAllBookAuthors([]);
+    expect(result).toEqual([]);
   });
 });
