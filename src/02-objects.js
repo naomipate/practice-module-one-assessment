@@ -12,11 +12,11 @@ let animal = {
 
 /**
  * Creates an object of the specified type and assigns it the given name
- * @param {string} objectType - The type of object to be created
- * @param {string} objectName - The name to be assigned to the created object
+ * @param {string} objectKey - The key to be created
+ * @param {string} objectValue - The value to be assigned to the key
  * @returns {object} - The newly created object
  */
-function createObject(objectType, objectName) {
+function createObject(objectKey, objectValue) {
   // code to create object
 }
 
@@ -45,7 +45,7 @@ function updateProperty(obj, propertyName, newValue) {
  * Removes a property from the given object
  * @param {object} obj - The object from which the property will be removed
  * @param {string} propertyName - The name of the property to be removed
- * @returns {boolean} - True if the property was removed successfully, false otherwise
+ * @returns {object} - The updated object
  */
 function removeProperty(obj, propertyName) {
   // code to remove property
@@ -77,15 +77,6 @@ function getObjectType(obj) {
  */
 function getObjectName(obj) {
   // code to return object name
-}
-
-/**
- * Returns a dictionary of all properties and their values for the given object
- * @param {object} obj - The object whose properties will be returned
- * @returns {object} - A dictionary of all properties and their values for the given object
- */
-function getObjectProperties(obj) {
-  // code to return object properties
 }
 
 /**

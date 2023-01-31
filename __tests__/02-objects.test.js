@@ -12,26 +12,28 @@ const {
 } = require("../src/02-objects");
 
 describe("createObject", () => {
-  test("creates an object with the specified type and name", () => {
-    const objectType = "Person";
-    const objectName = "John Doe";
-    const object = createObject(objectType, objectName);
-    expect(object.type).toEqual(objectType);
-    expect(object.name).toEqual(objectName);
+  test("createObject creates an object with a string key and string value", () => {
+    const result = createObject("name", "John");
+    expect(result).toEqual({ name: "John" });
   });
 
-  test("returns an error message if objectType is not a string", () => {
-    const objectType = 123;
-    const objectName = "John Doe";
-    const result = createObject(objectType, objectName);
-    expect(result).toEqual("Error: objectType must be a string.");
+  test("createObject creates an object with a numeric key and numeric value", () => {
+    const result = createObject(1, 10);
+    expect(result).toEqual({ 1: 10 });
   });
 
-  test("returns an error message if objectName is not a string", () => {
-    const objectType = "Person";
-    const objectName = 123;
-    const result = createObject(objectType, objectName);
-    expect(result).toEqual("Error: objectName must be a string.");
+  test("returns an error message if objectKey is not defined", () => {
+    const objectKey = undefined;
+    const objectValue = "John Doe";
+    const result = createObject(objectKey, objectValue);
+    expect(result).toEqual("Error: objectKey must be defined.");
+  });
+
+  test("returns an error message if objectValue is not defined.", () => {
+    const objectKey = "Person";
+    const objectValue = undefined;
+    const result = createObject(objectKey, objectValue);
+    expect(result).toEqual("Error: objectValue must be defined.");
   });
 });
 
@@ -93,7 +95,7 @@ describe("removeProperty", () => {
     const obj = { name: "John Doe", age: 30 };
     const propertyName = "age";
     const result = removeProperty(obj, propertyName);
-    expect(result).toBe(true);
+    expect(result).toBe({ name: "John Doe" });
     expect(obj).not.toHaveProperty(propertyName);
   });
 
@@ -185,34 +187,6 @@ describe("getObjectName", () => {
     obj.property1 = "value1";
     obj.property2 = "value2";
     expect(getObjectName(obj)).toBe("test object");
-  });
-});
-
-describe("getObjectProperties", () => {
-  const object = {
-    prop1: "value1",
-    prop2: "value2",
-    prop3: "value3",
-  };
-
-  test("returns a dictionary of properties and their values for a plain object", () => {
-    const properties = getObjectProperties(object);
-    expect(properties).toEqual({
-      prop1: "value1",
-      prop2: "value2",
-      prop3: "value3",
-    });
-  });
-
-  test("returns an error message if no object is passed", () => {
-    const properties = getObjectProperties();
-    expect(properties).toEqual("Error: no object provided.");
-  });
-
-  test("returns an error message if the argument is not an object", () => {
-    const obj = "not an object";
-    const result = getObjectProperties(obj);
-    expect(result).toEqual("Error: argument must be an object.");
   });
 });
 
