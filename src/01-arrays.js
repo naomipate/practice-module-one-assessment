@@ -9,6 +9,9 @@ const sampleArray2 = ["apple", "banana", "orange", "kiwi", "mango"];
  */
 function createArray(size) {
   // code to create array
+  let arr = new Array(size);
+  arr.fill(null);
+  return arr;
 }
 
 /**
@@ -19,6 +22,8 @@ function createArray(size) {
  */
 function addElement(arr, element) {
   // code to add element
+  arr.push(element);
+  return arr.length;
 }
 
 /**
@@ -29,6 +34,18 @@ function addElement(arr, element) {
  */
 function removeElement(arr, index) {
   // code to remove element
+  if (arr[index]) {
+  let remove = arr.splice(index, 1);
+  if (!arr.includes(remove)) {
+    return true;
+  } else {
+    return false;
+  }
+} else if (arr.length === 0) {
+  return `Error: The array is empty.`;
+} else {
+  return `Error: Index out of bounds.`;
+}
 }
 
 /**
@@ -39,6 +56,13 @@ function removeElement(arr, index) {
  */
 function getElement(arr, index) {
   // code to return element
+  if (arr[index]) {
+   return arr[index];
+  } else if (arr[index] < 0) {
+    return `Error: The array is empty.`;
+  } else {
+    return `Error: Index out of bounds`;
+  }
 }
 
 /**
@@ -48,6 +72,15 @@ function getElement(arr, index) {
  */
 function getArrayLength(arr) {
   // code to return array length
+  if (Array.isArray(arr)) {
+    if (arr.length > 0) {
+      return arr.length;
+    } else if (arr.length === 0) {
+      return 0;
+    }
+  } else {
+    return `Error: Input is not an array.`;
+  }
 }
 
 /**
@@ -58,6 +91,20 @@ function getArrayLength(arr) {
  */
 function findElement(arr, element) {
   // code to find element
+  if (Array.isArray(arr)) {
+    if (element) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === element) {
+          return arr.indexOf(arr[i]);
+        }
+      } 
+      return -1;
+    } else {
+      return `Error: Second argument is not provided`;
+    }
+  } else {
+    return `Error: Input is not an array.`;
+  }
 }
 
 /**
@@ -67,6 +114,15 @@ function findElement(arr, element) {
  */
 function reverseArray(arr) {
   // code to reverse array
+  if (Array.isArray(arr)) {
+    if (arr.length > 0) {
+      return arr.reverse();
+    } else {
+      return `Error: Array is empty.`;
+    }
+  } else {
+    return `Error: Input is not an array.`;
+  }
 }
 
 /**
@@ -76,6 +132,25 @@ function reverseArray(arr) {
  */
 function sortArray(arr) {
   // code to sort array
+  if (Array.isArray(arr)) {
+    let arrAscending = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === "number") {
+        if (arrAscending.length === 0) {
+          arrAscending.push(arr[i]);
+        } else if (arrAscending[arrAscending.length-1] > arr[i]) {
+          arrAscending.unshift(arr[i]);
+        } else {
+          arrAscending.push(arr[i]);
+        }
+      } else {
+        return `Error: Array must only contain numeric elements`;
+      }
+    }
+    return arrAscending;
+  } else {
+    return `Error: Input is not an array`;
+  }
 }
 
 /**
@@ -85,6 +160,21 @@ function sortArray(arr) {
  */
 function removeDuplicates(arr) {
   // code to remove duplicates
+  let array = [];
+  if (Array.isArray(arr)) {
+    for (let i = 0; i < arr.length; i++) {
+      if(array === 0) {
+        array.push(arr[i]);
+      } else if (!array.includes(arr[i])) {
+        array.push(arr[i]);
+      } else {
+        let remove = arr.splice(arr[i], 1);
+      }
+    }
+    return array;
+  } else {
+    return `Error: Input is not an array`;
+  }
 }
 
 /**
@@ -95,6 +185,26 @@ function removeDuplicates(arr) {
  */
 function selectElements(arr, n) {
   // code to select elements
+  let newArray = [];
+  if (Array.isArray(arr)) {
+    if (typeof n === "number") {
+      if (n <= 0) {
+        return newArray;
+      }
+      else if (n <= arr.length) {
+        for (let i = 0; i < n; i++) {
+          newArray.push(arr[i]);
+        }
+        return newArray;
+      } else {
+        return arr;
+      }
+    } else {
+      return `Error: n is not an integer`;
+    }
+  } else {
+    return `Error: Input is not an array`;
+  }
 }
 
 module.exports = {

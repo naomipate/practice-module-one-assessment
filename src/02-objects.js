@@ -18,6 +18,17 @@ let animal = {
  */
 function createObject(objectKey, objectValue) {
   // code to create object
+  let newObject = {};
+  if (objectKey) {
+    if (objectValue) {
+      newObject[objectKey] = objectValue;
+      return newObject;
+    } else {
+      return `Error: objectValue must be defined.`;
+    }
+  } else {
+    return `Error: objectKey must be defined.`;
+  }
 }
 
 /**
@@ -28,6 +39,16 @@ function createObject(objectKey, objectValue) {
  */
 function addProperty(obj, propertyName, propertyValue) {
   // code to add property
+  if (typeof obj === "object") {
+    if (typeof propertyName === "string") {
+      obj[propertyName] = propertyValue;
+      return obj;
+    } else {
+      return `Error: second argument must be a string.`;
+    }
+  } else {
+    return `Error: first argument must be an object.`;
+  }
 }
 
 /**
@@ -39,6 +60,16 @@ function addProperty(obj, propertyName, propertyValue) {
  */
 function updateProperty(obj, propertyName, newValue) {
   // code to update property
+  if (typeof obj === "object") {
+    if (Object.keys(obj).includes(propertyName)) {
+      obj[propertyName] = newValue;
+      return !!(obj[propertyName] === newValue);
+    } else {
+      return `Error: property does not exist.`;
+    }
+  } else {
+    return `Error: first argument must be an object.`;
+  }
 }
 
 /**
@@ -49,6 +80,16 @@ function updateProperty(obj, propertyName, newValue) {
  */
 function removeProperty(obj, propertyName) {
   // code to remove property
+  if (typeof obj === "object") {
+    if (Object.keys(obj).includes(propertyName)) {
+      delete obj[propertyName];
+      return obj;
+    } else {
+      return `Error: property does not exist.`;
+    }
+  } else {
+    return `Error: first argument must be an object.`;
+  }
 }
 
 /**
@@ -59,6 +100,15 @@ function removeProperty(obj, propertyName) {
  */
 function getProperty(obj, propertyName) {
   // code to return property value
+  if (typeof obj === "object") {
+    if (Object.keys(obj).includes(propertyName)) {
+      return obj[propertyName];
+    } else {
+      return `Error: property does not exist.`;
+    }
+  } else {
+    return `Error: first argument must be an object.`;
+  }
 }
 
 /**
@@ -69,6 +119,7 @@ function getProperty(obj, propertyName) {
  */
 function getKeyValueType(obj, key) {
   // code to return key value type
+  return typeof obj[key];
 }
 
 /**
@@ -78,6 +129,7 @@ function getKeyValueType(obj, key) {
  */
 function getObjectName(obj) {
   // code to return object name
+  return obj.name;
 }
 
 /**
@@ -88,6 +140,15 @@ function getObjectName(obj) {
  */
 function compareObjects(obj1, obj2) {
   // code to compare objects
+  if (typeof obj1 === typeof obj2) {
+    if(obj1.every === obj2.every) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -97,6 +158,15 @@ function compareObjects(obj1, obj2) {
  */
 function cloneObject(obj) {
   // code to clone object
+  if (typeof obj === "object") {
+    if (obj !== null && obj !== undefined) {
+      return JSON.parse(JSON.stringify(obj));
+    } else {
+      return `Error: argument must be an object.`;
+    }
+  } else {
+    return `Error: argument must be an object.`;
+  }
 }
 
 module.exports = {

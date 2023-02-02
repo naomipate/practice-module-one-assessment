@@ -2,7 +2,7 @@ const {
   calculateBulkPrice,
   calculateDiscountedPrice,
   categorizeAnimals,
-} = require("../src/word-problems");
+} = require("../src/06-word-problems");
 
 describe("calculateBulkPrice", () => {
   it("should return the original price if quantity is between 1 and 10", () => {

@@ -9,7 +9,7 @@ const {
   countOdd,
   reverseArray,
   isPalindrome,
-} = require("../src/accumulator-pattern");
+} = require("../src/04-accumulator-pattern");
 
 describe("sumArray", () => {
   it("returns the sum of all numbers in an array", () => {

@@ -94,7 +94,7 @@ describe("removeProperty", () => {
     const obj = { name: "John Doe", age: 30 };
     const propertyName = "age";
     const result = removeProperty(obj, propertyName);
-    expect(result).toBe({ name: "John Doe" });
+    expect(result).toStrictEqual({ name: "John Doe" });
     expect(obj).not.toHaveProperty(propertyName);
   });
 
@@ -207,13 +207,13 @@ describe("cloneObject", () => {
 
   test("returns an error message if the argument is not an object", () => {
     const obj = "not an object";
-    const result = getObjectProperties(obj);
+    const result = cloneObject(obj);
     expect(result).toEqual("Error: argument must be an object.");
   });
 
   test("returns an error message if the argument is null or undefined", () => {
-    const result1 = getObjectProperties(null);
-    const result2 = getObjectProperties(undefined);
+    const result1 = cloneObject(null);
+    const result2 = cloneObject(undefined);
     expect(result1).toEqual("Error: argument must be an object.");
     expect(result2).toEqual("Error: argument must be an object.");
   });
